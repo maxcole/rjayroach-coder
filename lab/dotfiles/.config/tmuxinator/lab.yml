@@ -1,0 +1,24 @@
+# ~/.config/tmuxinator/lab.yml
+
+name: lab
+root: ~/dev/lab
+
+windows:
+  - genesis:
+      layout: even-horizontal
+      root: ~/dev/lab/genesis/ansible/roles
+      panes:
+        - nvim
+        - 
+  - paas:
+      layout: even-horizontal
+      root: ~/dev/lab/paas/configure
+      panes:
+        - nvim
+        - 
+  - customer:
+      layout: even-horizontal
+      root: ~/dev/lab/customer/configure
+      panes:
+        - nvim
+        - 
