@@ -1,0 +1,4 @@
+---
+git:
+  repos:
+    src: git@github.com:maxcole/gift.git

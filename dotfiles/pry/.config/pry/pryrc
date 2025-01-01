@@ -1,0 +1,9 @@
+
+if defined?(Rails)
+  def r
+    reload!
+  end
+  def c
+    cd Rails
+  end
+end

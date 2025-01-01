@@ -1,0 +1,6 @@
+# OMZ
+
+## Notes
+
+- [ ] Search
+- [ ] Completion
