@@ -6,19 +6,19 @@ root: ~/dev/lab
 windows:
   - genesis:
       layout: even-horizontal
-      root: ~/dev/lab/genesis/ansible/roles
+      root: ~/dev/ops/ansible/roles
       panes:
         - nvim
         - 
   - paas:
       layout: even-horizontal
-      root: ~/dev/lab/paas/configure
+      root: ~/dev/lab/provider/ansible
       panes:
         - nvim
         - 
   - customer:
       layout: even-horizontal
-      root: ~/dev/lab/customer/configure
+      root: ~/dev/lab/customer/ansible
       panes:
         - nvim
         - 

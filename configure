@@ -1,6 +1,8 @@
 #!/bin/bash
 
-./setup.yml -t user-install -e uid=b1 $*
-./setup.yml -t user-config -e uid=b1 $*
-# ./setup.yml -t user-admin -e uid=b1 $*
-#!/usr/bin/env -S ansible-playbook -i vars/hosts.yml -l localhost
+# ./configure.yml -t user-config $*
+# ./configure.yml -t user-install $*
+./configure.yml -t user-admin $*
+
+# ./configure.yml -t user-install -e uid=b1 $*
+# ./configure.yml -t user-config -e uid=b1 $*

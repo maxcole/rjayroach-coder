@@ -1,6 +1,10 @@
-# Packer image-build repo commands
+# packer repo commands
 
+# packer cache dir
 export PACKER_CONFIG_DIR="$HOME/.local/share/packer"
+
+# packer_dir() { ~/dev/ops/packer/.builds/base/proxmox-iso }
+packer_dir() { ~/dev/ops/packer/.builds/base/debian-bookworm }
 
 pc() {
   cd ~/packer
@@ -23,10 +27,7 @@ pt() {
   tree .builds
 }
 
+# Testing
 packer_parse() {
   ruby -e "puts 'parse the yaml playbook for the build'"
 }
-
-# Changes directory to packer_dir
-# packer_dir() { ~/packer/.builds/base/proxmox-iso }
-packer_dir() { ~/packer/.builds/base/debian-bookworm }

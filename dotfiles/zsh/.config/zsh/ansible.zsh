@@ -1,6 +1,6 @@
 # custom aliases
 
-export ANSIBLE_ROLES_PATH="~/dev/lab/genesis/ansible/roles"
+# export ANSIBLE_ROLES_PATH="~/dev/lab/genesis/ansible/roles"
 export ANSIBLE_VAULT_PASSWORD_FILE="./secrets.pwd"
 
 alias ave="ansible-vault edit secrets.enc"
