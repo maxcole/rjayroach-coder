@@ -15,7 +15,14 @@
     stow:
       src: "{{ path.my_config }}/dotfiles"
       target: "{{ user.HOME }}"
+    git:
+      prefix: git@github.com
+      repos: {}
   tasks:
+
+    - debug:
+        var: stow
+      tags: [always]
 
     - name: Ensure that a uid was provided
       ansible.builtin.fail:

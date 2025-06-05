@@ -7,6 +7,12 @@ bindkey -v
 
 source <(fzf --zsh)
 
+# Claude
+alias clc="clear; claude"
+
+# Clasp
+alias clp="clasp push"
+
 # Docker
 alias dcd="docker compose down"
 alias dvls="docker volume ls"
@@ -35,7 +41,7 @@ ta() {
 }
 alias tls="tmux list-sessions"
 # -a shows hidden files; -l follow symlinks; -I ignore
-alias tsa="tree -a -l -I .git -I tmp"
+alias tsa="tree -a -l -I .git -I tmp -I claude-commands -I .DS_Store -I ._.DS_Store"
 
 alias mx=tmuxinator
 
@@ -43,6 +49,7 @@ alias mx=tmuxinator
 # General Aliases and helpers
 alias cls="clear"
 alias dconf="(cd ~/config/dotfiles; nvim .)"
+alias lsar="lsa -R"
 
 zconf() {
   file="aliases.zsh"
@@ -61,7 +68,9 @@ zsrc() {
 alias ag="alias | grep ${1}"
 
 cda() { zcd "$HOME/dev/apps" }
+cdb() { zcd "$HOME/dev/business" }
 cdc() { zcd "$HOME/.config" }
+cdd() { zcd "$HOME/dev" }
 cdl() { zcd "$HOME/dev/lab" }
 cdmc() { zcd "$HOME/config" }
 cdn() { zcd "$HOME/notes" }
