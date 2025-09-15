@@ -1,7 +1,7 @@
-# rws-controller.yml
+# claude.yml
 <% 
   require "#{File.dirname(path)}/tmuxinator_project.rb"
-  project = TmuxinatorProject.new(path: path).setup # path is a value from Tmuxinator
+  project = TmuxinatorProject.new(path: path, root: ENV.fetch('CODE_DIR', Dir.home)).setup # path is a value from Tmuxinator
 %>
 
 name: <%= project.name %>
@@ -12,16 +12,15 @@ attach: true
 tmux_command: tmux
 
 windows:
-  - ansible:
-      root: <%= project.subdir('ansible') %>
+  - main:
       layout: <%= project.layout(:claude) %>
       panes:
         - claude
         - 
-        - nvim .
-  - terraform:
-      root: <%= project.subdir('terraform') %>
+        - nvim CLAUDE.md
+  - bin:
+      root: <%= project.subdir('bin') %>
       layout: <%= project.layout(:even_horizontal) %>
       panes:
-        - 
-        - nvim .
+        -
+        -

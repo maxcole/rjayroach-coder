@@ -1,4 +1,4 @@
-# rws-controller.yml
+# roteoh-test.yml
 <% 
   require "#{File.dirname(path)}/tmuxinator_project.rb"
   project = TmuxinatorProject.new(path: path).setup # path is a value from Tmuxinator
@@ -12,16 +12,8 @@ attach: true
 tmux_command: tmux
 
 windows:
-  - ansible:
-      root: <%= project.subdir('ansible') %>
-      layout: <%= project.layout(:claude) %>
-      panes:
-        - claude
-        - 
-        - nvim .
-  - terraform:
-      root: <%= project.subdir('terraform') %>
+  - main:
       layout: <%= project.layout(:even_horizontal) %>
       panes:
-        - 
-        - nvim .
+        -
+        -
